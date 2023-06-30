@@ -34,7 +34,7 @@
 		[sv.trailingAnchor constraintEqualToAnchor:g.trailingAnchor constant:-20.0],
 		
 	]];
-
+	
 	NSArray *pathRects = [NSArray arrayWithObjects:
 						  [NSValue valueWithCGRect:CGRectMake(60, 20, 100, 100)],
 						  [NSValue valueWithCGRect:CGRectMake(200, 60, 100, 100)],
@@ -44,9 +44,11 @@
 						  [NSValue valueWithCGRect:CGRectMake(160, 60, 100, 100)],
 						  nil];
 	
+	NSArray <NSString *>*titles = @[@"Two Paths", @"Overlapped", @"Union"];
+
 	NSInteger i = 0, j = 0;
-	
-	for (NSString *s in @[@"Two Paths", @"Overlapped", @"Union"]) {
+
+	for (NSString *s in titles) {
 		UILabel *label = [UILabel new];
 		label.text = s;
 		label.textAlignment = NSTextAlignmentCenter;
