@@ -39,7 +39,7 @@
 	CGRect r = CGRectMake(40.0, 20.0, 100.0, 100.0);
 	
 	// create and arrange Square, Diamond, Triangle, Circle and PacMan shapes
-	//	and add them to pathsView
+	//	and add them to shapesView
 	for (NSInteger i = kFirstShape; i < kPolygon; i++) {
 		CGMutablePathRef p = [PathGen buildShape:(ShapeType)i rect:r];
 		MyShape *shape = [MyShape new];
@@ -54,7 +54,7 @@
 	}
 	
 	// create and arrange a few polygons (5, 6, 7, 8 and 9 sides)
-	//	and add them to pathsView
+	//	and add them to shapesView
 	for (NSInteger i = 5; i < 10; i++) {
 		CGMutablePathRef p = [PathGen buildShape:kPolygon rect:r numSides:i];
 		MyShape *shape = [MyShape new];
