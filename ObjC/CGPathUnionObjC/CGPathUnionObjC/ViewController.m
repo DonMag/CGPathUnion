@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "BasicsViewController.h"
+#import "DemoViewController.h"
 
 @interface ViewController ()
 
@@ -61,7 +62,8 @@
 	[self.navigationController pushViewController:vc animated:YES];
 }
 - (void)demoTapped {
-	
+	DemoViewController *vc = [DemoViewController new];
+	[self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

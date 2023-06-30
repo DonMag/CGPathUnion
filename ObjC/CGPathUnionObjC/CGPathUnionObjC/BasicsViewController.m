@@ -15,10 +15,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+	self.title = @"The Basics...";
 	self.view.backgroundColor = UIColor.systemBackgroundColor;
 	
 	UIStackView *sv = [UIStackView new];
 	sv.axis = UILayoutConstraintAxisVertical;
+	sv.spacing = 4.0;
 	sv.translatesAutoresizingMaskIntoConstraints = NO;
 	[self.view addSubview:sv];
 	
@@ -35,9 +38,9 @@
 	NSArray *pathRects = [NSArray arrayWithObjects:
 						  [NSValue valueWithCGRect:CGRectMake(60, 20, 100, 100)],
 						  [NSValue valueWithCGRect:CGRectMake(200, 60, 100, 100)],
-						  [NSValue valueWithCGRect:CGRectMake(120, 20, 100, 100)],
+						  [NSValue valueWithCGRect:CGRectMake(100, 20, 100, 100)],
 						  [NSValue valueWithCGRect:CGRectMake(160, 60, 100, 100)],
-						  [NSValue valueWithCGRect:CGRectMake(120, 20, 100, 100)],
+						  [NSValue valueWithCGRect:CGRectMake(100, 20, 100, 100)],
 						  [NSValue valueWithCGRect:CGRectMake(160, 60, 100, 100)],
 						  nil];
 	
@@ -58,7 +61,7 @@
 		sl.lineJoin = kCALineJoinRound;
 		[v.layer addSublayer:sl];
 		[sv addArrangedSubview:v];
-		[sv setCustomSpacing:8.0 afterView:v];
+		[sv setCustomSpacing:12.0 afterView:v];
 		
 		CGRect r1 = [[pathRects objectAtIndex:i++] CGRectValue];
 		CGRect r2 = [[pathRects objectAtIndex:i++] CGRectValue];

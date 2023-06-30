@@ -16,6 +16,9 @@
 		FC436CB32A4EFFB400F7A6A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC436CB22A4EFFB400F7A6A0 /* main.m */; };
 		FC436CBB2A4EFFE200F7A6A0 /* BasicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC436CBA2A4EFFE200F7A6A0 /* BasicsViewController.m */; };
 		FC436CBE2A4EFFFF00F7A6A0 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC436CBD2A4EFFFF00F7A6A0 /* DemoViewController.m */; };
+		FC436CC12A4F236600F7A6A0 /* MyShape.m in Sources */ = {isa = PBXBuildFile; fileRef = FC436CC02A4F236600F7A6A0 /* MyShape.m */; };
+		FC436CC42A4F237800F7A6A0 /* ShapesView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC436CC32A4F237800F7A6A0 /* ShapesView.m */; };
+		FC436CC72A4F238C00F7A6A0 /* PathGen.m in Sources */ = {isa = PBXBuildFile; fileRef = FC436CC62A4F238C00F7A6A0 /* PathGen.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,12 @@
 		FC436CBA2A4EFFE200F7A6A0 /* BasicsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicsViewController.m; sourceTree = "<group>"; };
 		FC436CBC2A4EFFFF00F7A6A0 /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		FC436CBD2A4EFFFF00F7A6A0 /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		FC436CBF2A4F236600F7A6A0 /* MyShape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyShape.h; sourceTree = "<group>"; };
+		FC436CC02A4F236600F7A6A0 /* MyShape.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyShape.m; sourceTree = "<group>"; };
+		FC436CC22A4F237800F7A6A0 /* ShapesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapesView.h; sourceTree = "<group>"; };
+		FC436CC32A4F237800F7A6A0 /* ShapesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapesView.m; sourceTree = "<group>"; };
+		FC436CC52A4F238C00F7A6A0 /* PathGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathGen.h; sourceTree = "<group>"; };
+		FC436CC62A4F238C00F7A6A0 /* PathGen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PathGen.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +86,12 @@
 				FC436CBA2A4EFFE200F7A6A0 /* BasicsViewController.m */,
 				FC436CBC2A4EFFFF00F7A6A0 /* DemoViewController.h */,
 				FC436CBD2A4EFFFF00F7A6A0 /* DemoViewController.m */,
+				FC436CBF2A4F236600F7A6A0 /* MyShape.h */,
+				FC436CC02A4F236600F7A6A0 /* MyShape.m */,
+				FC436CC22A4F237800F7A6A0 /* ShapesView.h */,
+				FC436CC32A4F237800F7A6A0 /* ShapesView.m */,
+				FC436CC52A4F238C00F7A6A0 /* PathGen.h */,
+				FC436CC62A4F238C00F7A6A0 /* PathGen.m */,
 				FC436CA92A4EFFB200F7A6A0 /* Main.storyboard */,
 				FC436CAC2A4EFFB400F7A6A0 /* Assets.xcassets */,
 				FC436CAE2A4EFFB400F7A6A0 /* LaunchScreen.storyboard */,
@@ -159,8 +174,11 @@
 				FC436CA82A4EFFB200F7A6A0 /* ViewController.m in Sources */,
 				FC436CA22A4EFFB200F7A6A0 /* AppDelegate.m in Sources */,
 				FC436CBB2A4EFFE200F7A6A0 /* BasicsViewController.m in Sources */,
+				FC436CC72A4F238C00F7A6A0 /* PathGen.m in Sources */,
 				FC436CBE2A4EFFFF00F7A6A0 /* DemoViewController.m in Sources */,
+				FC436CC12A4F236600F7A6A0 /* MyShape.m in Sources */,
 				FC436CB32A4EFFB400F7A6A0 /* main.m in Sources */,
+				FC436CC42A4F237800F7A6A0 /* ShapesView.m in Sources */,
 				FC436CA52A4EFFB200F7A6A0 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

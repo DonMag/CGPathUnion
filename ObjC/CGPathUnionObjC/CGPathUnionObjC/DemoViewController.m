@@ -6,6 +6,8 @@
 //
 
 #import "DemoViewController.h"
+#import "PathGen.h"
+#import "ShapesView.h"
 
 @interface DemoViewController ()
 
@@ -14,18 +16,59 @@
 @implementation DemoViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
+	[super viewDidLoad];
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+	self.title = @"Drag the Shapes!";
+	self.view.backgroundColor = UIColor.systemBackgroundColor;
+	
+	ShapesView *pathsView = [ShapesView new];
+	pathsView.translatesAutoresizingMaskIntoConstraints = NO;
+	[self.view addSubview:pathsView];
+	
+	UILayoutGuide *g = self.view.safeAreaLayoutGuide;
+	
+	[NSLayoutConstraint activateConstraints:@[
+		
+		[pathsView.topAnchor constraintEqualToAnchor:g.topAnchor constant:20.0],
+		[pathsView.leadingAnchor constraintEqualToAnchor:g.leadingAnchor constant:20.0],
+		[pathsView.trailingAnchor constraintEqualToAnchor:g.trailingAnchor constant:-20.0],
+		[pathsView.bottomAnchor constraintEqualToAnchor:g.bottomAnchor constant:-20.0],
+		
+	]];
+	
+	CGRect r = CGRectMake(40.0, 20.0, 100.0, 100.0);
+	
+	// create and arrange Square, Diamond, Triangle, Circle and PacMan shapes
+	//	and add them to pathsView
+	for (NSInteger i = kFirstShape; i < kPolygon; i++) {
+		CGMutablePathRef p = [PathGen buildShape:(ShapeType)i rect:r];
+		MyShape *shape = [MyShape new];
+		shape.thePath = p;
+		[pathsView addShape:shape];
+		if (r.origin.x > 40.0) {
+			r.origin.x = 40.0;
+			r.origin.y += r.size.height + 30.0;
+		} else {
+			r.origin.x += r.size.width + 60.0;
+		}
+	}
+	
+	// create and arrange a few polygons (5, 6, 7, 8 and 9 sides)
+	//	and add them to pathsView
+	for (NSInteger i = 5; i < 10; i++) {
+		CGMutablePathRef p = [PathGen buildShape:kPolygon rect:r numSides:i];
+		MyShape *shape = [MyShape new];
+		shape.thePath = p;
+		[pathsView addShape:shape];
+		if (r.origin.x > 40.0) {
+			r.origin.x = 40.0;
+			r.origin.y += r.size.height + 30.0;
+		} else {
+			r.origin.x += r.size.width + 60.0;
+		}
+	}
+	
+	pathsView.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1.0];
 }
-*/
 
 @end
