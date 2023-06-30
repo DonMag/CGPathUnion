@@ -21,18 +21,18 @@
 	self.title = @"Drag the Shapes!";
 	self.view.backgroundColor = UIColor.systemBackgroundColor;
 	
-	ShapesView *pathsView = [ShapesView new];
-	pathsView.translatesAutoresizingMaskIntoConstraints = NO;
-	[self.view addSubview:pathsView];
+	ShapesView *shapesView = [ShapesView new];
+	shapesView.translatesAutoresizingMaskIntoConstraints = NO;
+	[self.view addSubview:shapesView];
 	
 	UILayoutGuide *g = self.view.safeAreaLayoutGuide;
 	
 	[NSLayoutConstraint activateConstraints:@[
 		
-		[pathsView.topAnchor constraintEqualToAnchor:g.topAnchor constant:20.0],
-		[pathsView.leadingAnchor constraintEqualToAnchor:g.leadingAnchor constant:20.0],
-		[pathsView.trailingAnchor constraintEqualToAnchor:g.trailingAnchor constant:-20.0],
-		[pathsView.bottomAnchor constraintEqualToAnchor:g.bottomAnchor constant:-20.0],
+		[shapesView.topAnchor constraintEqualToAnchor:g.topAnchor constant:20.0],
+		[shapesView.leadingAnchor constraintEqualToAnchor:g.leadingAnchor constant:20.0],
+		[shapesView.trailingAnchor constraintEqualToAnchor:g.trailingAnchor constant:-20.0],
+		[shapesView.bottomAnchor constraintEqualToAnchor:g.bottomAnchor constant:-20.0],
 		
 	]];
 	
@@ -44,7 +44,7 @@
 		CGMutablePathRef p = [PathGen buildShape:(ShapeType)i rect:r];
 		MyShape *shape = [MyShape new];
 		shape.thePath = p;
-		[pathsView addShape:shape];
+		[shapesView addShape:shape];
 		if (r.origin.x > 40.0) {
 			r.origin.x = 40.0;
 			r.origin.y += r.size.height + 30.0;
@@ -59,7 +59,7 @@
 		CGMutablePathRef p = [PathGen buildShape:kPolygon rect:r numSides:i];
 		MyShape *shape = [MyShape new];
 		shape.thePath = p;
-		[pathsView addShape:shape];
+		[shapesView addShape:shape];
 		if (r.origin.x > 40.0) {
 			r.origin.x = 40.0;
 			r.origin.y += r.size.height + 30.0;
@@ -68,7 +68,7 @@
 		}
 	}
 	
-	pathsView.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1.0];
+	shapesView.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1.0];
 }
 
 @end
